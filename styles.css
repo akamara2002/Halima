@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(Lima.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.wrap {
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.clock {
+    font-size: 60px;
+    font-weight: bold;
+    color: #7DE5ED;
+    margin-bottom: 20px;
+    animation: pulse 1s infinite;
+}
+
+.update {
+    font-weight: 1000;
+    font-style: italic;
+    font-size: 30px;
+    color: #A0E4CB;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.down, .up {
+    color: #f50659;
+    margin-bottom: 20px;
+    animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@media screen and (max-width: 600px) {
+    .wrap {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .clock {
+        font-size: 40px;
+    }
+
+    .update {
+        font-size: 20px;
+    }
+
+    .down, .up {
+        text-align: left;
+        padding: 0 10px;
+    }
+}
